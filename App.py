@@ -55,6 +55,7 @@ st.header('Environment Data')
 st.write(user_data)
 
 crop_name = model.predict(user_data)
+st.subheader(crop_name)
 for predict1 in range(crop_name.shape[1]):
   if crop_name[0,predict1] == 1.0:
     if predict1 == 0:                                                                                              # Above we have converted the crop names into numerical form, so that we can apply the machine learning model easily. Now we have to again change the numerical values into names of crop so that we can print it when required.
