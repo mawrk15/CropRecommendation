@@ -39,49 +39,49 @@ st.write(user_data)
 crop_name = model.predict(user_data)
 for predict1 in range(len(crop_name)):
     if crop_name[i]==1:
-        if predict1 == 0:                                                                                              # Above we have converted the crop names into numerical form, so that we can apply the machine learning model easily. Now we have to again change the numerical values into names of crop so that we can print it when required. 
-            crop_name = 'Apple'
+	if predict1 == 0:
+		crop_name = 'Apple'
 	elif predict1 == 1:
-            crop_name = 'Banana'
+        	crop_name = 'Banana'
 	elif predict1 == 2:
-	    crop_name = 'Blackgram'
+		crop_name = 'Blackgram'
 	elif predict1 == 3:
-	    crop_name = 'Chickpea'
+		crop_name = 'Chickpea'
 	elif predict1 == 4:
-	    crop_name = 'Coconut'
+	 	crop_name = 'Coconut'
 	elif predict1 == 5:
-	    crop_name = 'Coffee'
+		crop_name = 'Coffee'
 	elif predict1 == 6:
-	    crop_name = 'Cotton'
+		crop_name = 'Cotton'
 	elif predict1 == 7:
-	    crop_name = 'Grapes'
+		crop_name = 'Grapes'
 	elif predict1 == 8:
-	    crop_name = 'Jute'
+		crop_name = 'Jute'
 	elif predict1 == 9:
-	    crop_name = 'Kidneybeans'
+		crop_name = 'Kidneybeans'
 	elif predict1 == 10:
-	    crop_name = 'Lentil'
+		crop_name = 'Lentil'
 	elif predict1 == 11:
-	    crop_name = 'Maize'
+		crop_name = 'Maize'
 	elif predict1 == 12:
-	    crop_name = 'Mango'
+		crop_name = 'Mango'
 	elif predict1 == 13:
-	    crop_name = 'Mothbeans'
+	    	crop_name = 'Mothbeans'
 	elif predict1 == 14:
-	    crop_name = 'Mungbeans'
+		crop_name = 'Mungbeans'
 	elif predict1 == 15:
-	    crop_name = 'Muskmelon'
+	    	crop_name = 'Muskmelon'
 	elif predict1 == 16:
-	    crop_name = 'Orange'
+	    	crop_name = 'Orange'
 	elif predict1 == 17:
-	    crop_name = 'Papaya'
+	    	crop_name = 'Papaya'
 	elif predict1 == 18:
-	    crop_name = 'Pigeonpeas'
+	    	crop_name = 'Pigeonpeas'
 	elif predict1 == 19:
-	    crop_name = 'Pomegranate'
+	    	crop_name = 'Pomegranate'
 	elif predict1 == 20:
-	    crop_name = 'Rice'
+	    	crop_name = 'Rice'
 	elif predict1 == 21:
-	    crop_name = 'Watermelon'
+	    	crop_name = 'Watermelon'
 st.subheader('Crop Recommended')
 st.subheader(str(crop_name))
