@@ -39,13 +39,13 @@ def user_report():
 
 
   user_report_data = {
-      'Nitrogen':N,
-      'Phosphorus':P,
-      'Potassium':K,
-      'Temperature':Temp,
-      'Humidity':Hum,
-      'pH':pH,
-      'Rainfall':Rain,
+      'N':N,
+      'P':P,
+      'K':K,
+      'temperature':Temp,
+      'humidity':Hum,
+      'ph':pH,
+      'rainfall':Rain,
   }
   report_data = pd.DataFrame(user_report_data, index=[0])
   return report_data
