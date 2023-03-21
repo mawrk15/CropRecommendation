@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 
 
-df = pd.read_csv('~/Downloads/Crop_recommendation.csv')
+df = pd.read_csv('Crop_recommendation.csv')
 x = df.drop(['label'], axis = 1)
 y = df['label']
 from sklearn.model_selection import train_test_split
