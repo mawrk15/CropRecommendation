@@ -3,7 +3,24 @@ import pickle
 import sklearn
 import pandas as pd
 import numpy as np
-model = pickle.load(open('model.sav', 'rb'))
+import pandas as pd
+import numpy as np
+df = pd.read_csv('~/Downloads/Crop_recommendation.csv')
+x = df.drop(['label'], axis = 1)
+y = df['label']
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2)
+type(x_train)
+y_train, y_test = np.array(y_train), np.array(y_test)
+from sklearn.preprocessing import OneHotEncoder
+encoder = OneHotEncoder(sparse = False)
+y1reshaped = y_train.reshape(len(y_train), 1)
+Ytr = encoder.fit_transform(y1reshaped)
+y2reshaped = y_test.reshape(len(y_test), 1)
+Yts = encoder.fit_transform(y2reshaped)
+from sklearn.neighbors import KNeighborsClassifier  
+model = KNeighborsClassifier(n_neighbors=3)
+model.fit(x_train,Ytr) 
 
 st.title('Crop Recommendation Prediction')
 st.sidebar.header('Environment Data')
