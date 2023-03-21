@@ -103,6 +103,6 @@ for predict1 in range(crop_name.shape[1]):
       crop_name = 'Watermelon'
     break
   else:
-    crop_name = "No crops in the database is suitable")
+    crop_name = "No crops in the database is suitable"
 st.subheader('Crop Recommended')
 st.subheader(str(crop_name))
